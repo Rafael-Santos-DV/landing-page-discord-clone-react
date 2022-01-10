@@ -264,3 +264,7 @@ export const SectionTwo = styled.section`
         }
     }
 `;
+
+export const SectionThree = styled.section`
+    background-color: red;
+`;

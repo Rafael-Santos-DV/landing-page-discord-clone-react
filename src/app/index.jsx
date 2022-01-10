@@ -1,4 +1,14 @@
-import { Box, Container, ContainerContent, GlobalStyles, Header, Nav, Section, SectionTwo, Ul } from "../components/styles/styles";
+import { Box,
+    Container,
+    ContainerContent,
+    GlobalStyles,
+    Header,
+    Nav,
+    Section,
+    SectionThree,
+    SectionTwo,
+    Ul } 
+from "../components/styles/styles";
 import logo from "../assets/logo.svg";
 import imgtow from "../assets/asset-two.svg";
 import imgone from "../assets/asset-one.svg";
@@ -58,6 +68,9 @@ export const App = () => {
             <SectionTwo>
                 <SectionTwoContent />
             </SectionTwo>
+            <SectionThree>
+                <div>ola meus amgiso</div>
+            </SectionThree>
         </div>
     );
 }
