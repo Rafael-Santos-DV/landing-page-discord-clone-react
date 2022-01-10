@@ -1,8 +1,9 @@
-import { Box, Container, ContainerContent, GlobalStyles, Header, Nav, Section, Ul } from "../components/styles/styles";
+import { Box, Container, ContainerContent, GlobalStyles, Header, Nav, Section, SectionTwo, Ul } from "../components/styles/styles";
 import logo from "../assets/logo.svg";
 import imgtow from "../assets/asset-two.svg";
 import imgone from "../assets/asset-one.svg";
 import { SectionContent } from "../components/section-one";
+import { SectionTwoContent } from "../components/section-two";
 
 
 export const App = () => {
@@ -54,6 +55,9 @@ export const App = () => {
             <Section className="section-one">
                 <SectionContent />
             </Section>
+            <SectionTwo>
+                <SectionTwoContent />
+            </SectionTwo>
         </div>
     );
 }

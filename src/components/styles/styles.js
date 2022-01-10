@@ -20,6 +20,7 @@ export const Container = styled.div`
     background-image: url(${imgbackground});
     background-size: cover;
     background-position: 50%;
+    
 `;
 
 export const Header = styled.header`
@@ -183,13 +184,13 @@ export const Section =  styled.section`
             width: 400px;
 
             > h2 {
-                font-size: 48px;
+                font-size: 3rem;
                 font-weight: 800;
             }
             > p {
                 padding-top: 25px;
-                font-size: 19px;
-                text-align: start;
+                font-size: 1rem;
+                text-align: left;
                 line-height: 1.7;
 
             }
@@ -209,6 +210,57 @@ export const Section =  styled.section`
                 font-size: 24px;
             }
            
+        }
+    }
+`;
+
+export const SectionTwo = styled.section`
+    width: 100%;
+    background-color: #F6F6F6;
+
+    > article.container-section-two {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        align-items: center;
+        justify-content: center;
+        padding: 140px 30px;
+
+        > div {
+            max-width: 400px;
+            > h2 {
+                font-size: 2.8rem;
+                padding-bottom: 25px;
+            }
+            > p {
+                font-size: .9rem;
+                line-height: 2;
+            }
+        }
+
+        > img {
+            margin-left: 50px;
+            width: 50%;
+            max-width: 650px;
+        }
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap-reverse;
+            padding: 70px 0;
+
+            > div {
+                width: 90%;
+                max-width: none;
+
+                > h2 {
+                    font-size: 1.8rem;
+                    padding: 20px 0;
+                }
+            }
+            > img {
+                width: 90%;
+                max-width: none;
+            }
         }
     }
 `;
