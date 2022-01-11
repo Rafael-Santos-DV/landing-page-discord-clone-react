@@ -16,6 +16,7 @@ import { SectionContent } from "../components/section-one";
 import { SectionTwoContent } from "../components/section-two";
 import { FiAlignJustify } from "react-icons/fi";
 import { IconContext } from "react-icons";
+import { SectionThreeContent } from "../components/section-three";
 
 export const App = () => {
     return(
@@ -45,7 +46,7 @@ export const App = () => {
                         <div className="container-elements">
                             {/* eslint-disable-next-line */}
                             <a href="#"><span>Entrar</span></a>
-                            <span>
+                            <span className="menu-mobile">
                                 <IconContext.Provider value={{ className: "icon-hambu" }}>
                                     <FiAlignJustify />
                                 </IconContext.Provider>
@@ -77,7 +78,7 @@ export const App = () => {
                 <SectionTwoContent />
             </SectionTwo>
             <SectionThree>
-                <div>ola meus amgiso</div>
+                <SectionThreeContent />
             </SectionThree>
         </div>
     );

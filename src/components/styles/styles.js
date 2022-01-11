@@ -20,7 +20,7 @@ export const Container = styled.div`
     background-image: url(${imgbackground});
     background-size: cover;
     background-position: 50%;
-    
+   
 `;
 
 export const Header = styled.header`
@@ -33,9 +33,10 @@ export const Box = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-around;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     align-items: center;
+    
 
     > img {
         width: 115px;
@@ -56,7 +57,8 @@ export const Box = styled.div`
             }
 
         }
-        > span {
+        > span.menu-mobile {
+            display: none;
             position: relative;
             top: 4px;
             margin-left: 20px;
@@ -74,6 +76,10 @@ export const Box = styled.div`
     @media only screen and (max-width: 1024px) {
         justify-content: space-between;
         padding: 0 40px;
+
+        > div.container-elements > span.menu-mobile {
+            display: initial;
+        }
 
         > nav {
             display: none;
@@ -146,7 +152,7 @@ export const ContainerContent = styled.article`
             padding-top: 20px;
 
             > span {
-                
+                text-align: center;
                 padding: 15px 20px;
                 margin: 10px;
                 border-radius: 30px;
@@ -266,23 +272,22 @@ export const Section =  styled.section`
     width: 100%;
     margin: 0 auto;
     padding: 80px 0;
-    max-width: 1400px;
 
     > article {
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
+        gap: 10px;
+        
         
         > img {
-            width: 55%;
-            padding-right: 80px;
+            width: 50%;
            
         }
        
         > div {
-            width: 400px;
+            width: 50%;
 
             > h2 {
                 font-size: 3rem;
@@ -325,11 +330,11 @@ export const SectionTwo = styled.section`
         margin: 0 auto;
         max-width: 1200px;
         align-items: center;
-        justify-content: center;
         padding: 140px 30px;
-
+        
         > div {
             max-width: 400px;
+            padding: 20px;
             > h2 {
                 font-size: 2.8rem;
                 padding-bottom: 25px;
@@ -341,7 +346,6 @@ export const SectionTwo = styled.section`
         }
 
         > img {
-            margin-left: 50px;
             width: 50%;
             max-width: 650px;
         }
@@ -367,5 +371,75 @@ export const SectionTwo = styled.section`
 `;
 
 export const SectionThree = styled.section`
-    background-color: red;
+    width: 100%;
+
+    > article {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 100px 0;
+        
+        > div {
+            width: 45%;
+
+            .container-text-three {
+                width: 60%;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                
+
+                > h2 {
+                    font-size: 45px;
+                    padding-bottom: 25px;
+                }
+                > p {
+                    line-height: 2;
+                }
+            }
+            
+        }
+        > img {
+            max-width: 55%;
+        }
+
+    }
+
+    @media only screen and (max-width: 1024px) {
+        > article {
+            padding: 100px 30px;
+            gap: 10px;
+
+            > div {
+                width: 50%;
+
+                > .container-text-three {
+                    width: 100%;
+                }
+            }
+            > img {
+                width: 50%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        > article {
+            flex-wrap: wrap;
+
+            > div {
+                width: 100%;
+                .container-text-three {
+                    h2 {
+                        font-size: 4vw;
+                    }
+                }
+            }
+            > img {
+                width: 100%;
+                min-width: 100%;
+            }
+        }
+    }
 `;
