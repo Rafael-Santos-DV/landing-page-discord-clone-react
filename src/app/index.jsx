@@ -14,7 +14,8 @@ import imgtow from "../assets/asset-two.svg";
 import imgone from "../assets/asset-one.svg";
 import { SectionContent } from "../components/section-one";
 import { SectionTwoContent } from "../components/section-two";
-
+import { FiAlignJustify } from "react-icons/fi";
+import { IconContext } from "react-icons";
 
 export const App = () => {
     return(
@@ -41,15 +42,22 @@ export const App = () => {
                                 
                             </Ul>
                         </Nav>
-                        <div className="container-button">
+                        <div className="container-elements">
                             {/* eslint-disable-next-line */}
                             <a href="#"><span>Entrar</span></a>
+                            <span>
+                                <IconContext.Provider value={{ className: "icon-hambu" }}>
+                                    <FiAlignJustify />
+                                </IconContext.Provider>
+                            </span>
                         </div>
                     </Box>
                     <ContainerContent>
                         <img src={imgtow} alt=""/>
                         <div>
-                            <h1>IMAGINE UM <br />LUGAR…</h1>
+                            <div className="container-heanding">
+                                <h1>IMAGINE UM LUGAR…</h1>
+                            </div>
                             <p>…onde você possa pertencer a um clube escolar, um grupo de gamers, ou uma comunidade artística mundial. Onde você e alguns amigos possam passar um tempo juntos. Um lugar que torna fácil conversar todos os dias e socializar com mais frequência.</p>
                             <div className="button-down">
                                 {/* eslint-disable-next-line */}
