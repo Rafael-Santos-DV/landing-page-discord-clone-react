@@ -5,6 +5,7 @@ import { Box,
     Header,
     Nav,
     Section,
+    SectionFour,
     SectionThree,
     SectionTwo,
     Ul } 
@@ -17,6 +18,8 @@ import { SectionTwoContent } from "../components/section-two";
 import { FiAlignJustify } from "react-icons/fi";
 import { IconContext } from "react-icons";
 import { SectionThreeContent } from "../components/section-three";
+import { SectionFourContent } from "../components/section-four";
+import { BiArrowToBottom } from "react-icons/bi";
 
 export const App = () => {
     return(
@@ -61,8 +64,15 @@ export const App = () => {
                             </div>
                             <p>…onde você possa pertencer a um clube escolar, um grupo de gamers, ou uma comunidade artística mundial. Onde você e alguns amigos possam passar um tempo juntos. Um lugar que torna fácil conversar todos os dias e socializar com mais frequência.</p>
                             <div className="button-down">
-                                {/* eslint-disable-next-line */}
-                                <span><a href="#">Baixar para linux</a></span>
+                                <span>
+                                     {/* eslint-disable-next-line */}
+                                    <a href="#">
+                                        <IconContext.Provider value={{ className: "icon-downl" }}>
+                                            <BiArrowToBottom />
+                                        </IconContext.Provider>
+                                            Baixar para linux
+                                    </a>
+                                </span>
                                 {/* eslint-disable-next-line */}
                                 <span><a href="#">Abra o discord no seu navagador</a></span>
                             </div>
@@ -80,6 +90,9 @@ export const App = () => {
             <SectionThree>
                 <SectionThreeContent />
             </SectionThree>
+            <SectionFour>
+                <SectionFourContent />
+            </SectionFour>
         </div>
     );
 }

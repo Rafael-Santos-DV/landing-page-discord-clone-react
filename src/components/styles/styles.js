@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import imgbackground from "../..//assets/asset-background.svg";
+import imgbackstar from "../../assets/asset-stars.svg";
+
 
 export const GlobalStyles = createGlobalStyle`
 *{
@@ -156,16 +158,23 @@ export const ContainerContent = styled.article`
                 padding: 15px 20px;
                 margin: 10px;
                 border-radius: 30px;
+
             }
             > span:nth-of-type(1) {
                 background-color: white;
                 transition: 1s;
                
                 > a {
+                    display: inline-flex;
                     color: black;
                     transition: 1s;
                     font-size: 20px;
-                    
+                    align-items: center;
+                    gap: 5px;
+
+                    > .icon-downl {
+                        font-size: 25px;
+                    }
                 }
                 &:hover {
                     box-shadow: 1px 4px 5px rgba(0, 0, 0, .5);
@@ -439,6 +448,127 @@ export const SectionThree = styled.section`
             > img {
                 width: 100%;
                 min-width: 100%;
+            }
+        }
+    }
+`;
+
+export const SectionFour = styled.section`
+    width: 100%;
+    background-color: #F6F6F6;
+    
+
+    > article {
+        max-width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 40px;
+
+        > div.container-text-four {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            > div {
+                width: 100%;
+
+                > h1 {
+                    font-size: clamp(20px, 4vw, 5vw);
+                    padding-bottom: 20px;
+                }
+            }
+            
+            
+            > p {
+                font-size: 1rem;
+            }
+            @media only screen and (max-width: 1024px) {
+                width: 100%;
+
+                > div {
+                    width: 80%;
+                   
+                }
+            }
+
+        }
+
+        > img.image-full {
+            padding-top: 50px;
+            width: 100%;
+        }
+
+        > div.background-star {
+            width: 100%;
+            background-image: url(${imgbackstar});
+            background-repeat: no-repeat;
+            background-position: center;
+            
+
+            > div.box-text-background{
+                padding-top: 100px;
+                text-align: center;
+
+                > h2 {
+                    font-size: clamp(30px, 2vw, 4vw);
+                    padding: 25px;
+                }
+
+                > div.button-download {
+                    display: inline-flex;
+                    background-color: #5865F2;
+                    padding: 15px 30px;
+                    border-radius: 30px;
+                    color: white;
+                    align-items: center;
+                    transition: 200ms linear;
+                    cursor: pointer;
+
+                    > .icon-downl {
+                        font-size: 25px;
+                    }
+
+                    &:hover{
+                        background-color: #7983F5;
+                        box-shadow: 0px 10px 50px 0 rgba(0, 0, 0, .3);
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            text-align: initial;
+
+            > div.container-text-four {
+                width: 100%;
+                justify-content: start;
+                align-items: initial;
+            }
+
+            > div.background-star {
+
+                > div.box-text-background {
+                    width: 100%;
+                    text-align: initial;
+
+                    > h2 {
+                        padding: 25px 0;
+                    }
+
+                    > div.button-download {
+                        width: 100%;
+                        margin: 0 auto;
+                        padding: 15px 60px;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
